@@ -1,0 +1,25 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+
+</head>
+<body>
+    <h1 align="center">Peculiar Region Recognition Web Application</h1>
+<div style="margin-left: 5%;padding: 20px; width: 40%;height: 500px;background-color: blanchedalmond;">
+    <form action ={{url_for('login')}}  method="POST" enctype="multipart/form-data" >
+        <h3 align="center">Login</h3>
+        <div class="form-group">
+            <label for="username" style="font-size: 30px;">Username</label>
+            <input type="text" class="form-control" width=50% id="email" name="username" placeholder="Enter email" /> 
+        </div><br/>
+        <div class="form-group">
+            <label for="password1"  style="font-size: 30px" >Password</label>
+            <input type="password" class="form-control" id="password1" name="password" placeholder="Enter password" />
+        </div>
+        <br />
+        <button type="submit" style="font-size: 30px;margin-left: 30%;" class="btn btn-primary">Login</button>
+
+        
+    </form>
+</div>
+     <img src ="../static/image/eye.jfif" style="float: right;margin-right: 15%;margin-top:-500px;" width="600px" height="500px"/> 
+</body>

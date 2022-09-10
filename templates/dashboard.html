@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Face Recgnition</title>
+    <style>
+        button {
+            float: m
+        }
+    </style>
+</head>
+
+<body>
+    <div class="'container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <h3 class="mt-5">Live Streaming</h3>
+                <img src="{{url_for('video_feed')}}" width="50%">
+
+
+                <form method="post" enctype="multipart/form-data">
+                    <div> <label for="file">
+            <input type="file" name="file">
+        </label></div>
+
+                    <div> <input class="btn btn-xs btn-primary btn-block" type='submit' value='Submit' id="myBtn">
+                    </div>
+                </form>
+
+
+                <div><button id="btn" name="Capture">Take a Snap</button></div>
+            </div>
+            <div class="col-md-4">
+                <img src="{{imgd}}" width="30%">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+</script>
+
+</html>

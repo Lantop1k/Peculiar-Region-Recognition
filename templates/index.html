@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Face Recgnition</title>
+    <style>
+        body{
+background-image: url('../static/image/iris3.jpeg');
+
+        }
+        li {
+          
+            width: 50px;
+            display: inline;
+            border:1px solid wheat;
+            padding: 10px;
+
+        }
+
+        a{
+            font-size: 20px;
+            font-weight: bold;
+            margin-right: 7px;
+            text-decoration: none;
+            
+
+        }
+        li:hover{background-color: blanchedalmond;}
+    </style>
+</head>
+
+
+<body>
+
+    <nav>
+        <ul>
+           <li> <a href="{{url_for('index')}}">Home</a> </li>
+             <li><a href="{{url_for('database')}}">Database</a></li>
+             <li><a href="{{url_for('training')}}">Training</a></li>
+        </ul>
+    </nav>
+
+   <H1 style = "margin-left:25%"> PECULIAR REGION RECOGNITION APPLICATION </H1>
+   
+   <br/>
+   
+   <div style="float:left; margin-left:8%;">
+       <form action ={{url_for('capture')}} method ="POST" enctype="multipart/form-data" >
+      <h2> Live Image Capturing</h2>
+	 
+	  <img  style = " border:3px solid black;padding:10px" width="400px" height="400px" src ="{{url_for('video_feed')}}" />
+      <br/><br/>
+	  <input type='submit' value="Capture" width="100px" height="50px"/>
+	  </form>
+   </div>
+   
+   <div style="float:right; margin-right:8%;">
+    <span style="font-size:12"> {{f_result}} </span> <br/> <br/>
+   <img  style = " border:3px solid black;padding:10px" width="200px" height="200px" src ={{uploadimg}} />
+   <form action ={{url_for('index')}} method ="POST" enctype="multipart/form-data" >
+    Choose from file <input type ='file' name ="file" /> <input style="margin-right:40%;" type ="submit" value ="upload" />
+	
+   </form>
+   <div>
+    <br/><br/>
+   <div style="border: 2px solid black; width:500px; height:330px; float:right">
+         <h2 style="margin-left:100px"> Peculiar Region Recgnition Result </h2>
+
+		 
+		 <span style="padding:20px;font-size:20px">  Person Detected: {{detection}} </span> <br/>
+
+         <h3 style="margin-left:150px"> Peculiar Regions</h3>
+         <span style="font-size:20px;margin-left:30px"> Left Eye </span> 
+         <span style="font-size:20px; float:right;margin-right:30px">  Right Eye</span> <br/>
+         <img  style = " border:3px solid black;margin-left:30px;" width="150px" height="150px" src ={{uploadimg2}} />
+         <img  style = " border:3px solid black;float:right;margin-right:30px;margin-top: 25x;" width="150px" height="150px" src ={{uploadimg3}} />
+          
+   <div>
+   
+</body>
+<script>
+</script>
+
+</html>
